@@ -1,0 +1,19 @@
+# todo.py
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+    print(f"Added: {task}")
+
+def show_tasks():
+    for i, task in enumerate(tasks, 1):
+        print(f"{i}. {task}")
+
+while True:
+    choice = input("1-Add, 2-Show, 3-Exit: ")
+    if choice == "1":
+        add_task(input("Enter task: "))
+    elif choice == "2":
+        show_tasks()
+    else:
+        break
